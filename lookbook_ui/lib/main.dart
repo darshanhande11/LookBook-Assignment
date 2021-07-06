@@ -12,9 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'LookBook',
-      theme: ThemeData(
-        primarySwatch: Colors.brown,
-      ),
+      debugShowCheckedModeBanner: false,
       home: Home(),
     );
   }
