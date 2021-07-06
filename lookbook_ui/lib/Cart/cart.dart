@@ -208,6 +208,7 @@ class _CartState extends State<Cart> {
                               GestureDetector(
                                 onTap: () {
                                   setState(() {
+                                    _sum = 0.0;
                                     item.wishlist = !item.wishlist;
                                   });
                                 },
