@@ -190,7 +190,7 @@ class _ProfileState extends State<Profile> {
         ),
         SizedBox(height: 45),
         Container(
-          margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
+          margin: EdgeInsets.fromLTRB(20, 0, 20, 30),
           child: DottedBorder(
             color: Colors.grey,
             borderType: BorderType.RRect,
