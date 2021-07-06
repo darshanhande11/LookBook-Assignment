@@ -29,7 +29,7 @@ class _CartState extends State<Cart> {
             children: [
               //Column Child 1 : ProductInfo grey box Container
               Container(
-                width: MediaQuery.of(context).size.width-200,
+                width: MediaQuery.of(context).size.width/1.6,
                 height: MediaQuery.of(context).size.height/12,
                 decoration: BoxDecoration(
                   color: Colors.grey[200],
@@ -120,14 +120,14 @@ class _CartState extends State<Cart> {
               SizedBox(height: 5),
               //Column Child 2 : row which has size, cart and wishlist options
               Container(
-                width: MediaQuery.of(context).size.width-200,
+                width: MediaQuery.of(context).size.width/1.6,
                 height: MediaQuery.of(context).size.height/12,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
                       width: MediaQuery.of(context).size.width/9,
-                      height: MediaQuery.of(context).size.height/15,
+                      height: MediaQuery.of(context).size.height/20,
                       decoration: BoxDecoration(
                         color: Colors.grey[200],
                         borderRadius: BorderRadius.circular(500),
@@ -146,28 +146,32 @@ class _CartState extends State<Cart> {
                       children: [
                         Container(
                           padding: EdgeInsets.all(10),
-                          width: MediaQuery.of(context).size.width/9,
-                          height: MediaQuery.of(context).size.height/15,
+                          width: MediaQuery.of(context).size.width/15,
+                          height: MediaQuery.of(context).size.height/25,
                           decoration: BoxDecoration(
                             color: Colors.grey[200],
                             borderRadius: BorderRadius.circular(500),
                           ),
-                          child: Icon(
-                            CupertinoIcons.bag_fill,
-                            color: Colors.green,
+                          child: Center(
+                            child: Icon(
+                              CupertinoIcons.bag_fill,
+                              color: Colors.green,
+                              size: MediaQuery.of(context).size.height/40,
+                            ),
                           ),
                         ),
                         SizedBox(width:10),
                         Container(
                           padding: EdgeInsets.all(10),
-                          width: MediaQuery.of(context).size.width/9,
-                          height: MediaQuery.of(context).size.height/15,
+                          width: MediaQuery.of(context).size.width/15,
+                          height: MediaQuery.of(context).size.height/25,
                           decoration: BoxDecoration(
                             color: Colors.red[100],
                             borderRadius: BorderRadius.circular(500),
                           ),
                           child: Icon(
                             CupertinoIcons.heart,
+                            size: MediaQuery.of(context).size.height/40,
                           ),
                         ),
                       ],
@@ -247,6 +251,90 @@ class _CartState extends State<Cart> {
             _buildCartCards('Linen Chino', 'High Lander', '32', 1994.0, true, 20.0,'assets/trousers.png'),
             _buildCartCards('White Sneakers', 'Benetton', '9', 1994.0, false, 20.0,'assets/shoes.png'),
           ]
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(30,15,30,15),
+          child: Divider(),
+        ),
+        SizedBox(height:10),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(30,15,30,5),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Total',
+                style: TextStyle(
+                  fontSize: 21,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              Row(
+                children: [
+                  Text(
+                    '\u{20B9}',
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[700],
+                    ),
+                  ),
+                  Text(
+                    '4616',
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.w800
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(30,0,30,15),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Inclusive of taxes',
+                style: TextStyle(
+                  color: Colors.grey[500],
+                  fontSize: 15,
+                ),
+              ),
+              Text(
+                'Breakdown',
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.grey[500],
+                  decoration: TextDecoration.underline,
+                ),
+              ),
+            ],
+          ),
+        ),
+        Container(
+          margin: EdgeInsets.fromLTRB(100, 50, 100, 50),
+          child: ClipRRect(
+            borderRadius: BorderRadius.all(Radius.circular(12)),
+            child: ElevatedButton(
+              onPressed: (){},
+              style: ElevatedButton.styleFrom(
+                primary: Colors.black,
+                elevation: 0,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(0,15,0,15),
+                child: Text(
+                  'Check Out',
+                  style: TextStyle(
+                    fontSize: 21,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+          ),
         ),
       ],
     );
