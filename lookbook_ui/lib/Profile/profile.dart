@@ -192,34 +192,38 @@ class _ProfileState extends State<Profile> {
         Container(
           margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
           child: DottedBorder(
-            color: Colors.black,
-            strokeWidth: 1,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: Colors.white,
-                elevation: 0,
-              ),
-              onPressed: () {},
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(0, 15, 0, 15),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      CupertinoIcons.headphones,
-                      size: 25,
-                      color: Colors.black,
-                    ),
-                    SizedBox(width: 20),
-                    Text(
-                      'Need Assistance ?',
-                      style: TextStyle(
+            color: Colors.grey,
+            borderType: BorderType.RRect,
+            radius: Radius.circular(12),
+            child: ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(12)),
+                child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.white,
+                  elevation: 0,
+                ),
+                onPressed: () {},
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 15, 0, 15),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        CupertinoIcons.headphones,
+                        size: 25,
                         color: Colors.black,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600,
                       ),
-                    ),
-                  ],
+                      SizedBox(width: 20),
+                      Text(
+                        'Need Assistance ?',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

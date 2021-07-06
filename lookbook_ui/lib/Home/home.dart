@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:lookbook_ui/Cart/cart.dart';
 import 'package:lookbook_ui/Profile/profile.dart';
 
 class Home extends StatefulWidget {
@@ -38,15 +39,12 @@ class _HomeState extends State<Home> {
   ];
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
-      'Index 0: Home',
+      'Home',
       style: optionStyle,
     ),
+    Cart(),
     Text(
-      'Index 1: Cart',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: Wishlist',
+      'Wishlist',
       style: optionStyle,
     ),
     Profile(),
